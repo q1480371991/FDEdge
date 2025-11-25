@@ -74,7 +74,7 @@ def SACScheduling_algorithm():
 
     # Plot the average delay varying episodes
     episodes_list = list(range(len(average_delays)))
-    np.savetxt('../results/AveDelay_sac_BS' + str(NUM_BSs) +
+    np.savetxt('../../results/AveDelay_sac_BS' + str(NUM_BSs) +
                '_tasks' + str(NUM_TASKS_max) +
                '_f' + str(ES_capacity_max) +
                '_episode' + str(episodes) + '.csv', average_delays, delimiter=',', fmt='%.4f')
@@ -82,7 +82,7 @@ def SACScheduling_algorithm():
     plt.plot(episodes_list, average_delays)
     plt.ylabel('Average make-span')
     plt.xlabel('Episode')
-    plt.savefig('../results/AveDelay_sac_BS' + str(NUM_BSs) +
+    plt.savefig('../../results/AveDelay_sac_BS' + str(NUM_BSs) +
                 '_tasks' + str(NUM_TASKS_max) +
                 '_f' + str(ES_capacity_max) +
                 '_episode' + str(episodes) + '.png')

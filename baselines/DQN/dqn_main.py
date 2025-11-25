@@ -73,7 +73,7 @@ def DQNScheduling_algorithm():
 
     # Plot the average delay varying episodes
     steps_list = list(range(len(average_delays)))
-    np.savetxt('../results/AveDelay_dqn_BS' + str(NUM_BSs) +
+    np.savetxt('../../results/AveDelay_dqn_BS' + str(NUM_BSs) +
                '_tasks' + str(NUM_TASKS_max) +
                '_f' + str(ES_capacity_max) +
                '_episode' + str(episodes) + '.csv', average_delays, delimiter=',', fmt='%.4f')
@@ -81,7 +81,7 @@ def DQNScheduling_algorithm():
     plt.plot(steps_list, average_delays)
     plt.ylabel('Average service delay')
     plt.xlabel('Episode')
-    plt.savefig('../results/AveDelay_dqn_BS' + str(NUM_BSs) +
+    plt.savefig('../../results/AveDelay_dqn_BS' + str(NUM_BSs) +
                 '_tasks' + str(NUM_TASKS_max) +
                 '_f' + str(ES_capacity_max) +
                 '_episode' + str(episodes) + '.png')
